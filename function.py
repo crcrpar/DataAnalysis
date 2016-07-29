@@ -41,17 +41,14 @@ def normal_eq_comb(AtA, AtB, PassSet = None):
 def column_group(B):
     #NOTE:
     # B's elements are bool.
-    #print("###B.shape: {}".format(B.shape))
     init = [np.arange(0, B.shape[1])]
     pre = init
     after = []
-    #print("pre = {}".format(pre))
 
     for i in range(0, B.shape[0]):
         all_ones = True
         vec = B[i]
-        #print("vec: {}".format(vec))
-        #print("vec.shape: {}".format(vec.shape))
+        
         for cols in pre:
             if len(cols) == 1:
                 after.append(cols)
